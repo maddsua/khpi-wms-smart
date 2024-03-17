@@ -1,0 +1,19 @@
+{
+	"version": 1,
+	"author": "maddsua",
+	"editor": "wokwi",
+	"parts": [
+	  { "type": "wokwi-arduino-nano", "id": "nano", "top": 0, "left": 0, "attrs": {} },
+	  { "type": "wokwi-servo", "id": "servo1", "top": -155.6, "left": 48, "attrs": {} },
+	  { "type": "wokwi-vcc", "id": "vcc1", "top": -143.24, "left": -57.6, "attrs": {} },
+	  { "type": "wokwi-gnd", "id": "gnd1", "top": -76.8, "left": -58.2, "attrs": {} },
+	  { "type": "wokwi-gnd", "id": "gnd2", "top": 86.4, "left": 133.8, "attrs": {} }
+	],
+	"connections": [
+	  [ "vcc1:VCC", "servo1:V+", "red", [ "v19.2" ] ],
+	  [ "nano:GND.1", "gnd2:GND", "black", [ "v0" ] ],
+	  [ "gnd1:GND", "servo1:GND", "black", [ "v0", "h57.6", "v-28.8" ] ],
+	  [ "servo1:PWM", "nano:9", "green", [ "h-28.8", "v19.4", "h28.8", "v19.2" ] ]
+	],
+	"dependencies": {}
+  }
